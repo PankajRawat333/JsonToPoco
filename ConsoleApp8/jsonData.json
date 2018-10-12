@@ -1,0 +1,23 @@
+[
+  {
+    "AssetType": "Paver",
+    "AssetId": "PaverId100",
+    "ContactName": "ContactName",
+    "Description": "description",
+    "Device": [
+      {
+        "Make": "BP02",
+        "SerialNumber": "BPPA0001",
+        "Ucid": null,
+        "Address": {
+          "AddressLine1": "address 1",
+          "AddressLine2": "add 2",
+          "City": "city",
+          "State": "B'lore",
+          "ZipCode": "124578",
+          "Country": "India"
+        }
+      }
+    ]
+  }
+]
