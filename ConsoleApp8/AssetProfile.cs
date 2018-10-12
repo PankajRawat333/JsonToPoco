@@ -8,12 +8,9 @@ namespace ConsoleApp8
         public AssetProfile()
         {
             CreateMap<JObject, AssetDTO>()
-                .ForAllMembers(dest => dest.Ignore());
-
-            CreateMap<JObject, AssetDTO>()
-                .ForMember(dest => dest.AssetId, o => o.MapFrom(j => j["AssetId"]))
+                .ForMember(dest => dest.AssetId, o => o.UseValue("100"))
                 .ForMember(dest => dest.Type, o => o.MapFrom(j => j["AssetType"]))
-                .ForMember(dest => dest.DeviceSerialNumber, o => o.MapFrom(j => JArray.Parse(j["Device"].ToString())[0]["SerialNumber"]));
+                .ForMember(dest => dest.DeviceSerialNumber, o => o.MapFrom(j => j["Device"][0]["SerialNumber"]));
         }
     }
 }
